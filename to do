@@ -1,0 +1,26 @@
+slide 1: 
+  first slide should be centered
+
+slide 4:
+  executive assistant shouldn't break on two lines
+  add css transitions to the people you worked for
+
+slide 5:
+  fix HREF highlighting, it sucks
+
+slide 6: 
+  Projects
+  add image of Assignment.io
+
+slide 7:
+  add image of whatshouldireadnext.me (fix cover issue)
+  fix positioning of whatshouldireadnext.me
+
+slide 8:
+add sprites for github, linked in, blog, twitter, codeschool
+
+
+
+Add COLOR!
+
+find out why the grey color isn't working on the steps that aren't active

@@ -1,0 +1,438 @@
+/*Resets*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+    background-color: #cfcccb;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*Code starts here*/
+body {
+    font-family: 'PT Sans', sans-serif;
+    min-height: 740px;
+    
+    background: rgb(215, 215, 215);
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 500, from(rgb(240, 240, 240)), to(rgb(190, 190, 190)));
+    background: -webkit-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:    -moz-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:     -ms-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:      -o-radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));
+    background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));    
+}
+
+/*
+    Now let's bring some text styles back ...
+*/
+b, strong { font-weight: bold }
+i, em { font-style: italic }
+
+/*
+    ... and give links a nice look.
+*/
+a {
+    color: inherit;
+    text-decoration: none;
+    padding: 0 0.1em;
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+
+a:hover,
+a:focus {
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+/*
+    Because the main point behind the impress.js demo is to demo impress.js
+    we display a fallback message for users with browsers that don't support
+    all the features required by it.
+    
+    All of the content will be still fully accessible for them, but I want
+    them to know that they are missing something - that's what the demo is
+    about, isn't it?
+    
+    And then we hide the message, when support is detected in the browser.
+*/
+
+.fallback-message {
+    font-family: sans-serif;
+    line-height: 1.3;
+    
+    width: 780px;
+    padding: 10px 10px 0;
+    margin: 20px auto;
+
+    border: 1px solid #E4C652;
+    border-radius: 10px;
+    background: #EEDC94;
+}
+
+.fallback-message p {
+    margin-bottom: 10px;
+}
+
+.impress-supported .fallback-message {
+    display: none;
+}
+
+/*
+    Now let's style the presentation steps.
+    
+    We start with basics to make sure it displays correctly in everywhere ...
+*/
+
+.step {
+    position: relative;
+    width: 900px;
+    padding: 40px;
+    margin: 20px auto;
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing:    border-box;
+    -ms-box-sizing:     border-box;
+    -o-box-sizing:      border-box;
+    box-sizing:         border-box;
+
+    font-family: 'PT Serif', georgia, serif;
+    font-size: 48px;
+    line-height: 1.5;
+}
+
+.step
+.impress-enabled .step {
+    margin: 0;
+    opacity: 0;
+
+    -webkit-transition: opacity 1s;
+    -moz-transition:    opacity 1s;
+    -ms-transition:     opacity 1s;
+    -o-transition:      opacity 1s;
+    transition:         opacity 1s;
+}
+.impress-enabled .step.active { opacity: 1 }
+
+#title {
+    padding: 0;
+}
+#title .try {
+    font-size: 64px;
+    position: absolute;
+    top: -3.75em;
+    left: 1.5em;
+    
+    -webkit-transform: translateZ(20px);
+    -moz-transform:    translateZ(20px);
+    -ms-transform:     translateZ(20px);
+    -o-transform:      translateZ(20px);
+    transform:         translateZ(20px);
+}
+#title .wrap {
+    color: #59545e;
+}
+#title h1 {
+    font-size: 120px;
+    color: #264757;
+    -webkit-transform: translateZ(50px);
+    -moz-transform:    translateZ(50px);
+    -ms-transform:     translateZ(50px);
+    -o-transform:      translateZ(50px);
+    transform:         translateZ(50px);
+}
+
+#technologies .tech {
+    color: #7d456d;
+}
+#technologies .columns{
+    width: 250px;
+    font-size: 20px;
+    
+}
+#technologies .columns .left{
+    float: left;
+    text-align: center;
+    color: #59545e;
+}
+#technologies .columns .right{
+    float: right;
+    text-align: center;
+    color: #59545e;
+}
+
+#flatiron {
+    width: 600px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 1;
+    color: #59545e;
+}
+#flatiron b {
+    display: block;
+    font-size: 150px;
+    color: #5e0d23;
+    text-decoration: none;
+    padding: 0 0.1em;
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.9);
+    border-radius: 0.2em;
+    
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+#flatiron b:hover {
+    text-decoration: underline;
+    text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
+}
+
+#former {
+    width: 800px;
+    text-align: center;
+    color: #59545e;
+}
+#former b {
+    color: #ab8f48;
+}
+#former a:hover {
+    text-decoration: underline;
+}
+
+#nyconrails {
+    width: 600px;
+    color: #59545e;
+}
+#nyconrails a {
+    color: #25264d;
+}
+#nyconrails a:hover {
+    text-decoration: underline;
+}
+#nyconrails .imagination {
+    font-size: 78px;
+    
+}
+
+#assignmentio a {
+    color: #B5AEC4;
+}
+#readnext a {
+    color: #AE7B4C;
+}
+#assignmentio, #readnext {
+    width: 700px;
+    padding-left: 50px;
+    color: #59545e;
+}
+#assignmentio a:hover, #readnext a:hover  {
+    text-decoration: underline;
+}
+
+#more p {
+    color: #59545e;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style:    preserve-3d;
+    -ms-transform-style:     preserve-3d;
+    -o-transform-style:      preserve-3d;
+    transform-style:         preserve-3d;
+}
+#more span,
+#more b {
+    display: inline-block;
+    -webkit-transform: translateZ(40px);
+    -moz-transform:    translateZ(40px);
+    -ms-transform:     translateZ(40px);
+    -o-transform:      translateZ(40px);
+     transform:        translateZ(40px);
+            
+    -webkit-transition: 0.5s;
+    -moz-transition:    0.5s;
+    -ms-transition:     0.5s;
+    -o-transition:      0.5s;
+    transition:         0.5s;
+}
+#more .github, #more .linkedin, #more .twitter, #more .blog, #more .codeschool {
+    width: 45px;
+    height: 38px;
+    float: left;
+    padding-right: 20px;
+}
+#more .github:hover, #more .linkedin:hover, #more .twitter:hover, #more .blog:hover, #more .codeschool:hover {
+    width: 45px;
+    height: 38px;
+    float: left;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+}
+#more .github {
+    background:url(../images/githubsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#more .github:hover {
+    background:url(../images/githubsprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#more .linkedin {
+    background:url(../images/linkedinsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#more .linkedin:hover {
+    background:url(../images/linkedinsprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#more .twitter {
+    background:url(../images/twittersprite.png);
+    background-position: 0px -42px;
+    background-repeat: no-repeat;
+}
+#more .twitter:hover {
+    background:url(../images/twittersprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#more .blog {
+    background:url(../images/blogsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#more .blog:hover {
+    background:url(../images/blogsprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#more .codeschool {
+    background:url(../images/codeschoolsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#more .codeschool:hover {
+    background:url(../images/codeschoolsprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#more .footnote {
+    font-size: 32px;
+    color: #59545e;
+    -webkit-transform: translateZ(-10px);
+    -moz-transform:    translateZ(-10px);
+    -ms-transform:     translateZ(-10px);
+    -o-transform:      translateZ(-10px);
+    transform:         translateZ(-10px);
+}
+#more .footnote a {
+    color: #ba2965;
+}
+#more.present span,
+#more.present b {
+    -webkit-transform: translateZ(0px);
+    -moz-transform:    translateZ(0px);
+    -ms-transform:     translateZ(0px);
+    -o-transform:      translateZ(0px);
+    transform:         translateZ(0px);
+}
+
+#overview { display: none }
+.impress-on-overview .step {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.hint {
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 200px;
+
+    background: rgba(38,71,87,0.5);
+    color: #EEE;
+    text-align: center;
+    
+    font-size: 50px;
+    padding: 20px;
+    
+    z-index: 100;
+
+    opacity: 0;
+    
+    -webkit-transform: translateY(400px);
+    -moz-transform:    translateY(400px);
+    -ms-transform:     translateY(400px);
+    -o-transform:      translateY(400px);
+    transform:         translateY(400px);
+
+    -webkit-transition: opacity 1s, -webkit-transform 0.5s 1s;
+    -moz-transition:    opacity 1s,    -moz-transform 0.5s 1s;
+    -ms-transition:     opacity 1s,     -ms-transform 0.5s 1s;
+    -o-transition:      opacity 1s,      -o-transform 0.5s 1s;
+    transition:         opacity 1s,         transform 0.5s 1s;
+}
+
+.impress-enabled .hint { display: block }
+.impress-on-title .hint {
+
+    opacity: 1;
+    
+    -webkit-transform: translateY(0px);
+    -moz-transform:    translateY(0px);
+    -ms-transform:     translateY(0px);
+    -o-transform:      translateY(0px);
+    transform:         translateY(0px);
+ 
+    -webkit-transition: opacity 1s 2s, -webkit-transform 0.5s 1.5s;
+    -moz-transition:    opacity 1s 2s,    -moz-transform 0.5s 1.5s;
+    -ms-transition:     opacity 1s 2s,     -ms-transform 0.5s 1.5s;
+    -o-transition:      opacity 1s 2s,      -o-transform 0.5s 1.5s;
+    transition:         opacity 1s 2s,         transform 0.5s 1.5s;
+}
+
+.impress-enabled          { pointer-events: none }
+.impress-enabled #impress { pointer-events: auto }
