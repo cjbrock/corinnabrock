@@ -134,7 +134,9 @@ a:focus {
 }
 .impress-enabled .step.active { opacity: 1 }
 
-
+div.size {
+    height: 750px;
+}
 
 #title {
     padding: 0;
@@ -151,17 +153,86 @@ a:focus {
     -o-transform:      translateZ(20px);
     transform:         translateZ(20px);
 }
+
+#title .first {
+    float: top;
+}
 #title .wrap {
     color: #59545e;
 }
 #title h1 {
     font-size: 120px;
     color: #264757;
+    font-weight: bold;
     -webkit-transform: translateZ(50px);
     -moz-transform:    translateZ(50px);
     -ms-transform:     translateZ(50px);
     -o-transform:      translateZ(50px);
     transform:         translateZ(50px);
+}
+
+#title .githubturquoise, #title .linkedinturquoise, #title .twitterturquoise, #title .blogturquoise, #title .codeschoolturquoise {
+    width: 45px;
+    height: 38px;
+    float: left;
+    padding-right: 20px;
+}
+#title .githubturquoise:hover, #title .linkedinturquoise:hover, #title .twitterturquoise:hover, #title .blogturquoise:hover, #title .codeschoolturquoise:hover {
+    width: 45px;
+    height: 38px;
+    float: left;
+    background-repeat: no-repeat;
+    padding-right: 20px;
+}
+#title .githubturquoise:hover {
+    background:url(../images/githubsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#title .githubturquoise {
+    background:url(../images/githubsprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#title .linkedinturquoise:hover {
+    background:url(../images/linkedinsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#title .linkedinturquoise {
+    background:url(../images/linkedinsprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#title .twitterturquoise:hover {
+    background:url(../images/twittersprite.png);
+    background-position: 0px -42px;
+    background-repeat: no-repeat;
+}
+#title .twitterturquoise {
+    background:url(../images/twittersprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#title .blogturquoise:hover {
+    background:url(../images/blogsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#title .blogturquoise {
+    background:url(../images/blogsprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+}
+#title .codeschoolturquoise:hover {
+    background:url(../images/codeschoolsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#title .codeschoolturquoise {
+    background:url(../images/codeschoolsprite.png);
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
 }
 
 #technologies .tech {
@@ -374,9 +445,9 @@ a:focus {
     position: fixed;
     left: 0;
     right: 0;
-    bottom: 200px;
+    bottom: 100px;
 
-    background: rgba(38,71,87,0.5);
+    background: rgba(38,71,87,1.0);
     color: #EEE;
     text-align: center;
     
