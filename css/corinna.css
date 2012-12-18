@@ -59,15 +59,9 @@ body {
     background:         radial-gradient(rgb(240, 240, 240), rgb(190, 190, 190));    
 }
 
-/*
-    Now let's bring some text styles back ...
-*/
 b, strong { font-weight: bold }
 i, em { font-style: italic }
 
-/*
-    ... and give links a nice look.
-*/
 a {
     color: inherit;
     text-decoration: none;
@@ -87,17 +81,6 @@ a:focus {
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
 
-/*
-    Because the main point behind the impress.js demo is to demo impress.js
-    we display a fallback message for users with browsers that don't support
-    all the features required by it.
-    
-    All of the content will be still fully accessible for them, but I want
-    them to know that they are missing something - that's what the demo is
-    about, isn't it?
-    
-    And then we hide the message, when support is detected in the browser.
-*/
 
 .fallback-message {
     font-family: sans-serif;
@@ -120,11 +103,6 @@ a:focus {
     display: none;
 }
 
-/*
-    Now let's style the presentation steps.
-    
-    We start with basics to make sure it displays correctly in everywhere ...
-*/
 
 .step {
     position: relative;
@@ -143,18 +121,20 @@ a:focus {
     line-height: 1.5;
 }
 
-.step
+
 .impress-enabled .step {
     margin: 0;
-    opacity: 0;
+    opacity: 0.3;
 
-    -webkit-transition: opacity 1s;
-    -moz-transition:    opacity 1s;
-    -ms-transition:     opacity 1s;
-    -o-transition:      opacity 1s;
-    transition:         opacity 1s;
+   -webkit-transition: opacity 1.5s;
+    -moz-transition:    opacity 1.5s;
+    -ms-transition:     opacity 1.5s;
+    -o-transition:      opacity 1.5s;
+    transition:         opacity 1.5s;
 }
 .impress-enabled .step.active { opacity: 1 }
+
+
 
 #title {
     padding: 0;
@@ -203,6 +183,8 @@ a:focus {
     color: #59545e;
 }
 
+
+
 #flatiron {
     width: 600px;
     text-align: center;
@@ -229,6 +211,8 @@ a:focus {
     text-decoration: underline;
     text-shadow: -1px -1px 2px rgba(100,100,100,0.5);
 }
+
+
 
 #former {
     width: 800px;
@@ -308,52 +292,52 @@ a:focus {
     background-repeat: no-repeat;
     padding-right: 20px;
 }
-#more .github {
-    background:url(../images/githubsprite.png);
-    background-position: 0px -49px;
-    background-repeat: no-repeat;
-}
 #more .github:hover {
     background:url(../images/githubsprite.png);
-    background-position: 0px 0px;
+    background-position: 0px -49px;
     background-repeat: no-repeat;
 }
-#more .linkedin {
-    background:url(../images/linkedinsprite.png);
-    background-position: 0px -49px;
+#more .github {
+    background:url(../images/githubsprite.png);
+    background-position: 0px 0px;
     background-repeat: no-repeat;
 }
 #more .linkedin:hover {
     background:url(../images/linkedinsprite.png);
-    background-position: 0px 0px;
+    background-position: 0px -49px;
     background-repeat: no-repeat;
 }
-#more .twitter {
-    background:url(../images/twittersprite.png);
-    background-position: 0px -42px;
+#more .linkedin {
+    background:url(../images/linkedinsprite.png);
+    background-position: 0px 0px;
     background-repeat: no-repeat;
 }
 #more .twitter:hover {
     background:url(../images/twittersprite.png);
-    background-position: 0px 0px;
+    background-position: 0px -42px;
     background-repeat: no-repeat;
 }
-#more .blog {
-    background:url(../images/blogsprite.png);
-    background-position: 0px -49px;
+#more .twitter {
+    background:url(../images/twittersprite.png);
+    background-position: 0px 0px;
     background-repeat: no-repeat;
 }
 #more .blog:hover {
     background:url(../images/blogsprite.png);
+    background-position: 0px -49px;
+    background-repeat: no-repeat;
+}
+#more .blog {
+    background:url(../images/blogsprite.png);
     background-position: 0px 0px;
     background-repeat: no-repeat;
 }
-#more .codeschool {
+#more .codeschool:hover {
     background:url(../images/codeschoolsprite.png);
     background-position: 0px -49px;
     background-repeat: no-repeat;
 }
-#more .codeschool:hover {
+#more .codeschool {
     background:url(../images/codeschoolsprite.png);
     background-position: 0px 0px;
     background-repeat: no-repeat;
